@@ -35,11 +35,16 @@ class App extends React.Component {
       for (let i = 0; i < fetchApi.data.totalPages; i++) {
         numberOfPage1.push(i);
       }
+      let count = 0;
+      for(let i =0; i < newList.length-1; i ++){
+        count = i+1;
+        if(newList[i].name === newList[count].name){
+          newList[count].name = null;
+        }
+      }
       this.setState({
         numberOfPage: numberOfPage1,
-      });
-      this.setState({
-        listFile: newList,
+        listFile: newList
       });
     } else {
       let newList = [];
@@ -51,11 +56,16 @@ class App extends React.Component {
       for (let i = 0; i < fetchApi.data.totalPages; i++) {
         numberOfPage1.push(i);
       }
+      let count = 0;
+      for(let i =0; i < newList.length-1; i ++){
+        count = i+1;
+        if(newList[i].name === newList[count].name){
+          newList[count].name = null;
+        }
+      }
       this.setState({
         numberOfPage: numberOfPage1,
-      });
-      this.setState({
-        listFile: newList,
+        listFile: newList
       });
     }
   }

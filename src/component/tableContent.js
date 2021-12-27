@@ -26,8 +26,8 @@ class TableContent extends React.Component {
           {
             this.props.listFile ? this.props.listFile.map((file, index) =>
             <tr key ={index} >
-              <th scope="row">{ (file.version > 1) ? null : index}</th>
-              <td style={(file.version >1) ? {border: "none"} : {}}>{ (file.version > 1) ? null : file.name}</td>
+              <th scope="row">{ (file.name) ? index : null}</th>
+              <td>{file.name}</td>
               <td>{file.version}</td>
               <td>{file.fileSize} MB</td>
               <td>{file.createDateTime}</td>
