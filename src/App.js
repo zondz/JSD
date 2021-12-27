@@ -36,10 +36,10 @@ class App extends React.Component {
         numberOfPage1.push(i);
       }
       let count = 0;
-      for(let i =0; i < newList.length-1; i ++){
-        count = i+1;
-        if(newList[i].name === newList[count].name){
-          newList[count].name = null;
+      for(let i = newList.length-1; 0 < i; i --){
+        count = i-1;
+        if(newList[count].name === newList[i].name){
+          newList[i].name = null;
         }
       }
       this.setState({
@@ -57,10 +57,10 @@ class App extends React.Component {
         numberOfPage1.push(i);
       }
       let count = 0;
-      for(let i =0; i < newList.length-1; i ++){
-        count = i+1;
-        if(newList[i].name === newList[count].name){
-          newList[count].name = null;
+      for(let i = newList.length-1; 0 < i; i --){
+        count = i-1;
+        if(newList[count].name === newList[i].name){
+          newList[i].name = null;
         }
       }
       this.setState({
